@@ -21,6 +21,7 @@ import { Hacker } from "@/app/Components/Svg/dashboardSignInSvg";
 import Github from "@/app/Components/Svg/github";
 import Footer from "@/app/Components/Footer/Footer";
 import Google from "@/app/Components/Svg/google";
+import { login } from "../Actions/actions";
 
 const formSchema = z.object({
   password: z
@@ -102,7 +103,7 @@ function ProfileForm() {
           <p className="text-muted-foreground text-center mx-auto">or</p>
           <Button
             type="submit"
-            /* formAction={login} */
+            formAction={login}
             className="bg-neutral-800/30 p-4 w-full hover:bg-neutral-800/20 text-white"
           >
             Log in

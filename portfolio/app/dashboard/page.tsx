@@ -12,10 +12,13 @@ async function page() {
     }
 
   return (
-    <div>Hello{ data.user.email}
-    
-    <button onClick={logout} className='bg-neutral-900/95  p-2 rounded-md'>Logout</button>
-    </div>
+    <section className='w-screen h-screen flex flex-col '>
+      <nav className='flex flex-row justify-between items-center p-4 bg-gray-800 text-white dark:text-white'>
+        <h1 className='text-2xl'>Dashboard</h1>
+        <button className='bg-gray-700 p-2 rounded' onClick={logout}>Logout</button>
+      </nav>
+    </section>
+  
   
   )
 }
