@@ -4,6 +4,7 @@ import { ArrowDown, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import React, { useState } from 'react'
 import Navbar from './Navbar';
+import { ModeToggle } from '../mode-toggle';
 
 function Home() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,8 +15,8 @@ function Home() {
             Portfolio®
           </h1>
           <div className="flex flex-row space-x-2 items-center">
-            {/* <ModeToggle /> */}
             
+            <ModeToggle/>
             <Menu
               className={`cursor-pointer ${isOpen ? "hidden" : ""}`}
               onClick={() => setIsOpen(!isOpen)}
