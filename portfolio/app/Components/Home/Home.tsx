@@ -68,7 +68,7 @@ function Home() {
           {/* Home text */}
           <div className=" font-bold font-mono pt-10 max-w-screen-lg lg:justify-center mx-auto">
             <h1 className="text-xl md:text-3xl ">
-              Hi I&apos;m Sibusiso, an aspiring Human Resources practitioner
+             An aspiring Human Resources Managment practitioner
               with a passion for fostering connections and building impactful
               solutions., On my path toward mastering the art of people
               management&#44;I&apos;ve embraced the exciting world of web

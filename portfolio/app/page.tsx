@@ -6,7 +6,7 @@ import Projects from "./Components/Home/Projects";
 import ValueAdd from "./Components/Home/ValueAdd";
 export default function Page() {
   return (
-    <main className="font-dmsans">
+    <main className="font-dmsans overflow-x-hidden">
      <Home/>
      <About/>
      <ValueAdd/>

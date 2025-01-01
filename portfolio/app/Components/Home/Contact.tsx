@@ -66,7 +66,7 @@ function Contact() {
               </Link>
             </div>
 
-            <div className="col-span-4 md:col-span-2 text-center text-md   spcae-y-6 gap-y-2 md:gap-2">
+            <div className="col-span-4 md:col-span-2 text-center text-md border-neutral-800  border-2  spcae-y-6 gap-y-2 md:gap-2 rounded-lg">
               <div className="border-2 lg:border-0 border-neutral-800 rounded-lg font-bold p-10">
                 <p>{time}</p>
                 <p>Johannesburg&#44;SA</p>
@@ -90,7 +90,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="col-span-6 text-black dark:text-white space-y-3 border-2 border-neutral-800 p-10 rounded-lg">
+            <div className="col-span-6 text-black dark:text-white space-y-3 border-2 border-neutral-800  p-10 rounded-lg">
               <h1 className="text-[#0f0f0f0] font-semibold text-xl text-pretty">
                 Check these link before you head Out
               </h1>
