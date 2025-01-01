@@ -1,3 +1,4 @@
+'use client'
 import { Separator } from '@radix-ui/react-dropdown-menu'
 import { CircleX } from 'lucide-react'
 import React from 'react'

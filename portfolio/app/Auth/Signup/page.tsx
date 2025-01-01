@@ -23,6 +23,7 @@ import Github from "@/app/Components/Svg/github";
 /* import { signup } from "./actions"; */
 import Link from "next/link";
 import Footer from "@/app/Components/Footer/Footer";
+import { signup } from "../Actions/actions";
 const formSchema = z.object({
   password: z
     .string()
@@ -133,7 +134,7 @@ function ProfileForm() {
           <Button
             type="submit"
             className="bg-neutral-800/30 p-4 w-full hover:bg-neutral-800/20 text-white"
-           /*  formAction={signup} */
+            formAction={signup}
           >
             Sign up
           </Button>
