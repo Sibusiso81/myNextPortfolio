@@ -14,23 +14,7 @@ function About() {
             src="https://i.ibb.co/2sYc7GR/IMG-7451.png"
             width={55}
             height={55}
-            /*   style={{
-            maxWidth: "30%"&#44;
-            height: "30%"&#44;
-          }} */
-            className="rounded-full object-cover lg:hidden "
-            priority
-          />
-          <Image
-            alt="hero-profile-image"
-            src="https://i.ibb.co/2sYc7GR/IMG-7451.png"
-            width={75}
-            height={75}
-            /*   style={{
-            maxWidth: "30%"&#44;
-            height: "30%"&#44;
-          }} */
-            className="rounded-full object-cover hidden lg:block "
+            className="rounded-full object-cover lg:w-[75px] lg:h-[75px]"
             priority
           />
         </div>
