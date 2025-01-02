@@ -21,7 +21,7 @@ import { Hacker } from "@/app/Components/Svg/dashboardSignInSvg";
 import Github from "@/app/Components/Svg/github";
 import Footer from "@/app/Components/Footer/Footer";
 import Google from "@/app/Components/Svg/google";
-import { login } from "../Actions/actions";
+import { login, signInWithGithub } from "../Actions/actions";
 
 const formSchema = z.object({
   password: z
@@ -83,7 +83,7 @@ function ProfileForm() {
             </FormItem>
           )}
         />
-        
+
         <div className="flex flex-col space-y-4">
           <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
             <Button
@@ -91,10 +91,10 @@ function ProfileForm() {
               className="bg-neutral-800/30 p-4 w-full hover:bg-neutral-800/20 text-white"
             >
               <Google /> Log in with Google
-              
             </Button>
             <Button
-              type="button"
+              type="submit"
+              formAction={signInWithGithub}
               className="bg-neutral-800/30 p-4 w-full hover:bg-neutral-800/20 text-white"
             >
               <Github /> Log in with GitHub
@@ -123,9 +123,7 @@ export default function Page() {
           <Hacker />
         </div>
         <div className="w-full md:w-1/2 space-y-4 justify-center items-center">
-          <h1 className="text-xl font-semibold text-center">
-            Welcome Mr Zulu
-          </h1>
+          <h1 className="text-xl font-semibold text-center">Welcome Mr Zulu</h1>
           <ProfileForm />
         </div>
       </section>

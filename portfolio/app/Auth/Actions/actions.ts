@@ -52,3 +52,23 @@ export async function logout() {
   revalidatePath('/', 'layout')
   redirect('/')
 }
+
+export async function signInWithGithub() {
+  const supabase = await createClient()
+  const {data,error} = await supabase.auth.signInWithOAuth({
+    provider: 'github',
+    options:{
+      redirectTo:'https://my-next-portfolio-wine.vercel.app/Auth/Callback'
+    }
+  })
+  /* 
+  
+    if (error) {
+    redirect('/Auth/Error')
+  }
+
+  revalidatePath('/', 'layout')
+  redirect('/dashboard')
+  
+  */
+}
