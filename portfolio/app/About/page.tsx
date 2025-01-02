@@ -10,7 +10,7 @@ import Nextjs from "../Components/Svg/next";
 import Supabase from "../Components/Svg/supabase";
 import HTML5 from "../Components/Svg/html";
 import Stack from "../Components/Stack/srack";
-
+import { Separator } from "@/components/ui/separator";
 
 
 function page() {
@@ -121,7 +121,35 @@ function page() {
           <p>@ 2024 Sibusiso Zulu</p>
           <p>Made with care and plenty coffee</p>
         </div>
+        <div className="flex flex-row space-x-4 w-full">
         
+          <div>
+             <Image
+                          alt="hero-profile-image"
+                          src="https://i.ibb.co/2sYc7GR/IMG-7451.png"
+                          width={100}
+                          height={100}
+                          style={{
+                            maxWidth: "100%",
+                            height: "100%",
+                          }}
+                          className="rounded-full object-cover w-14  "
+                          priority
+                        />
+            
+          </div>
+          <div className="flex flex-row space-x-2 items-center">
+          
+          <div className="flex space-x-2 flex-row"><h1>Driving Innovation in HR</h1>
+          <div><Separator orientation="vertical" className="bg-stone-700 h-full" /></div>
+          </div><div className="flex space-x-2 flex-row"><h1>Data-Driven HR Insights</h1>
+          <div><Separator orientation="vertical" className="bg-stone-700 h-full" /></div>
+          </div>
+          <div className="flex space-x-2 flex-row"><h1>Driving Innovation in HR</h1>
+          <div><Separator orientation="vertical" className="bg-stone-700 h-full" /></div>
+          </div>
+          </div>
+        </div>
     </section>
    
   </>
