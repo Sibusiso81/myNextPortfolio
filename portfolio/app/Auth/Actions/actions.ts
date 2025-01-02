@@ -61,7 +61,7 @@ export async function signInWithGithub() {
       redirectTo:'https://my-next-portfolio-wine.vercel.app/Auth/Callback'
     }
   })
-  /* 
+  
   
     if (error) {
     redirect('/Auth/Error')
@@ -70,5 +70,5 @@ export async function signInWithGithub() {
   revalidatePath('/', 'layout')
   redirect('/dashboard')
   
-  */
+ 
 }
