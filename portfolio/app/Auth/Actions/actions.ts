@@ -55,7 +55,7 @@ export async function logout() {
 
 export async function signInWithGithub() {
   const supabase = await createClient()
-  const {data,error} = await supabase.auth.signInWithOAuth({
+  const {error} = await supabase.auth.signInWithOAuth({
     provider: 'github',
     options:{
       redirectTo:'https://my-next-portfolio-wine.vercel.app/Auth/Callback'
