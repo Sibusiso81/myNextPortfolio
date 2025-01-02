@@ -4,6 +4,13 @@ import { redirect } from 'next/navigation'
 
 import { createClient } from '@/lib/supabase/server'
 import { logout } from '../Auth/Actions/actions';
+import { LogOut } from 'lucide-react';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+
 async function page() {
     const supabase = await createClient();
     const {data,error}= await supabase.auth.getUser();
@@ -13,9 +20,15 @@ async function page() {
 
   return (
     <section className='w-screen h-screen flex flex-col '>
-      <nav className='flex flex-row justify-between items-center p-4 bg-gray-800 text-white dark:text-white'>
-        <h1 className='text-2xl'>Dashboard</h1>
-        <button className='bg-gray-700 p-2 rounded' onClick={logout}>Logout</button>
+      <nav className='flex flex-row justify-between items-center p-4 bg-transparent text-white dark:text-white'>
+        <h1 className='text-xl'>Dashboard</h1>
+       <div>
+        <Avatar>
+        <AvatarImage src="https://i.ibb.co/Y23gG4W/IMG-2894.jpg" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+       <button className='b p-2 rounded' onClick={logout}><LogOut/></button>
+       </div>
       </nav>
     </section>
   

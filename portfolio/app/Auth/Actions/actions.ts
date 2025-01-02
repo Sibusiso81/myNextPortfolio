@@ -58,7 +58,7 @@ export async function signInWithGithub() {
   const {error} = await supabase.auth.signInWithOAuth({
     provider: 'github',
     options:{
-      redirectTo:'https://my-next-portfolio-wine.vercel.app/Auth/Callback'
+      redirectTo:'https://my-next-portfolio-wine.vercel.app/Auth/Callback/route.ts'
     }
   })
   
