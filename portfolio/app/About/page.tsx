@@ -10,7 +10,7 @@ import Nextjs from "../Components/Svg/next";
 import Supabase from "../Components/Svg/supabase";
 import HTML5 from "../Components/Svg/html";
 import Stack from "../Components/Stack/srack";
-import { Separator } from "@/components/ui/separator";
+
 
 
 function page() {
