@@ -18,6 +18,7 @@ export async function login(formData: FormData) {
   const { error } = await supabase.auth.signInWithPassword(data)
 
   if (error) {
+    console.log(error)
     redirect('/Auth/Error')
   }
 
@@ -55,20 +56,16 @@ export async function logout() {
 
 export async function signInWithGithub() {
   const supabase = await createClient()
-  const {error} = await supabase.auth.signInWithOAuth({
+  const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'github',
-    options:{
-      redirectTo:'https://my-next-portfolio-wine.vercel.app/Auth/Callback/route.ts'
-    }
+    options: {
+      redirectTo: 'http://localhost:3000/Auth/Callback',
+    },
   })
-  
-  
-    if (error) {
-    redirect('/Auth/Error')
+  if(error){
+    console.log(error)
   }
-
-  revalidatePath('/', 'layout')
-  redirect('/dashboard')
-  
- 
+  if (data.url) {
+    redirect(data.url) // use the redirect API for your server framework
+  }
 }
