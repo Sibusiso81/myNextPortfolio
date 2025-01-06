@@ -138,17 +138,7 @@ function page() {
                         />
             
           </div>
-          <div className="flex flex-row space-x-2 items-center">
           
-          <div className="flex space-x-2 flex-row"><h1>Driving Innovation in HR</h1>
-          <div><Separator orientation="vertical" className="bg-stone-700 h-full" /></div>
-          </div><div className="flex space-x-2 flex-row"><h1>Data-Driven HR Insights</h1>
-          <div><Separator orientation="vertical" className="bg-stone-700 h-full" /></div>
-          </div>
-          <div className="flex space-x-2 flex-row"><h1>Driving Innovation in HR</h1>
-          <div><Separator orientation="vertical" className="bg-stone-700 h-full" /></div>
-          </div>
-          </div>
         </div>
     </section>
    
