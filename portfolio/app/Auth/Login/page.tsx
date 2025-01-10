@@ -118,16 +118,22 @@ function ProfileForm() {
 export default function Page() {
   return (
     <>
-      <section className="max-w-screen-md h-screen flex flex-col lg:flex-row p-4 space-y-6 mx-auto justify-center items-center">
-        <div className="lg:w-1/2 lg:p-4">
-          <Hacker />
-        </div>
-        <div className="w-full md:w-1/2 space-y-4 justify-center items-center">
-          <h1 className="text-xl font-semibold text-center">Welcome Mr Zulu</h1>
-          <ProfileForm />
-        </div>
-      </section>
-      <Footer />
-    </>
+    <section
+      className="max-w-screen-md  h-screen flex flex-col lg:flex-row p-4 space-y-6 mx-auto  justify-center items-center
+      "
+    >
+      <div className="lg:w-1/2 lg:p-4">
+        <Hacker />
+      </div>
+
+      <div className="w-full md:w-1/2  space-y-4 justify-center items-center">
+        <h1 className="text-xl font-semibold text-center">
+          Welcome Mr Zulu{" "}
+        </h1>
+        <ProfileForm />
+      </div>
+    </section>
+    <Footer />
+  </>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Check } from "lucide-react";
 import { getWeather } from "@/lib/data";
@@ -13,9 +13,8 @@ import { getWeather } from "@/lib/data";
     "4hrs Coding",
     "Study Course Material ",
   ]);
-  const [weather, setWeather] = React.useState<any>();
-  
-  const [date, setDate] = React.useState<string>();
+
+
   function handleDailyCommitments() {
     setCommitmentText([
       "Morining Run",

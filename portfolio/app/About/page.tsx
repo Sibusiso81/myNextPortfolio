@@ -10,7 +10,7 @@ import Nextjs from "../Components/Svg/next";
 import Supabase from "../Components/Svg/supabase";
 import HTML5 from "../Components/Svg/html";
 import Stack from "../Components/Stack/srack";
-import { Separator } from "@/components/ui/separator";
+
 
 
 function page() {
@@ -121,25 +121,7 @@ function page() {
           <p>@ 2024 Sibusiso Zulu</p>
           <p>Made with care and plenty coffee</p>
         </div>
-        <div className="flex flex-row space-x-4 w-full">
-        
-          <div>
-             <Image
-                          alt="hero-profile-image"
-                          src="https://i.ibb.co/2sYc7GR/IMG-7451.png"
-                          width={100}
-                          height={100}
-                          style={{
-                            maxWidth: "100%",
-                            height: "100%",
-                          }}
-                          className="rounded-full object-cover w-14  "
-                          priority
-                        />
-            
-          </div>
-          
-        </div>
+     
     </section>
    
   </>

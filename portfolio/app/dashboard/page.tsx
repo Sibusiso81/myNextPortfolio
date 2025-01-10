@@ -2,10 +2,10 @@ import React from "react";
 import { redirect } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/server";
-import { logout } from "../Auth/Actions/actions";
-import { BookOpenText, CirclePlus, Divide, LogOut } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+
+import { BookOpenText} from "lucide-react";
+
+
 
 import Dashboard from "../Components/Dashboard/Dashboard";
 import { getMotivationalQuote, getWeather } from "@/lib/data";

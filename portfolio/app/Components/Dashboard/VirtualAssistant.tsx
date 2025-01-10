@@ -52,24 +52,7 @@ function GoalsForm() {
   return (
     <Form {...form}>
       <form className="space-y-6 lg:space-y-8">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input
-                  className="p-4"
-                  placeholder="Enter your Gemini API Key"
-                  type="email"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        
         <FormField
           control={form.control}
           name="email"
@@ -125,9 +108,10 @@ function GoalsForm() {
 
 function VA() {
   return (
-   <section className="w-screen h-screen flex flex-col p-4   ">
-     <div><GoalsForm/></div>
-   </section>
+    <section className="w-screen h-screen flex flex-col p-4 space-y-4   ">
+    <div><GoalsForm/></div>
+
+  </section>
   )
 }
 

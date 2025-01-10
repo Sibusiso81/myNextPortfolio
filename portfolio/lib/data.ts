@@ -20,7 +20,7 @@ export const getMotivationalQuote = async () => {
       throw new Error('NEXT_QUOTE_API_KEY is not defined');
     }
 
-    const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
+    const response = await fetch(url, {
       method: 'GET',
       headers: {
         'X-Api-Key':'jfCf0OOz9rXCGk2KK/jreA==zsU8DERfjeMDNtSN'

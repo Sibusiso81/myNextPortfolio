@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-function Navbar() {
+
+import { LogOut, Menu, X } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
+import { logout } from "../Auth/Actions/actions";
+export function Navbar() {
     const children ={
         hidden:{
             clipPath:'polygon(0% 100%,100% 100% ,100% 100%, 0% 100%)',
@@ -96,4 +100,34 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+
+
+
+function Nav() {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  return (
+    <>
+    <div className="w-full h-fit  border-[#eaeaea] flex justify-between items-center  relative z-40 p-2">
+        <h1 className="font-bold dark:text-[#eaeaea] text-lg text-black">
+          Portfolio®
+        </h1>
+        <div className="flex flex-row space-x-2 items-center">
+          <LogOut onClick={logout}/>
+          <Menu
+            className={`cursor-pointer ${isOpen ? "hidden" : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+          />
+          <X
+            className={`cursor-pointer ${isOpen ? "" : "hidden"}`}
+            onClick={() => setIsOpen(!isOpen)}
+          />
+        </div>
+      </div>
+      <AnimatePresence mode="wait">
+        {isOpen ? <Navbar/> : null}
+      </AnimatePresence>
+    </>
+  )
+}
+
+export default Nav
