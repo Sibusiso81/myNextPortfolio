@@ -3,12 +3,17 @@ import { redirect } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/server";
 
-import { BookOpenText} from "lucide-react";
 
 
 
-import Dashboard from "../Components/Dashboard/Dashboard";
 import { getMotivationalQuote, getWeather } from "@/lib/data";
+import { DateWidget } from "../Components/Dashboard/DateWidget";
+import { WeatherWidget } from "../Components/Dashboard/WeatherWidget";
+import { CourseSchedule } from "../Components/Dashboard/CourseSchedule";
+import { ProjectTracker } from "../Components/Dashboard/ProjectTracker";
+import { StudyTimer } from "../Components/Dashboard/StudyTimer";
+import { JobApplicationTracker } from "../Components/Dashboard/JobAplicationTracker";
+import { TechNewsFeed } from "../Components/Dashboard/TeckNewsWidget";
 
 async function page() {
   const supabase = await createClient();
@@ -70,30 +75,33 @@ async function page() {
     }
     const date = getDate();  
 
-console.log(quote)
+console.log(quote,date,task)
   return (
-    <section className="h-fit w-screen grid grid-cols-2 p-2 ">
-      <div className="col-span-2 md:col-span-1 ">
-        {/* Weather */}
-      <div className="flex flex-col space-y-20">
-      <div className="flex flex-col max-w-32 font-bold">
-            <p className='text-2xl  '>{date}</p>
-            <p>{`${weather.current.temp_c}`}  &deg; C</p>
-            <p>{weather.current.condition.text}</p>
+    <div className="container mx-auto p-4">
+    <h1 className="text-3xl font-bold mb-6">Student Developer Dashboard</h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="lg:col-span-2 space-y-4">
+        <div className="flex flex-wrap gap-4">
+          
+          <DateWidget />
+          <WeatherWidget weather={weather} />
+        {/*   <QuoteWidget quote={quote[0]} /> */}
         </div>
-        {/* Motivationa Quote */}
-        <div className="flex flex-row space-x-2  my-auto mx-auto   items-center text-sm text-wrap max-w-xs p-2">
-          <div><BookOpenText className="h-full "/></div>
-          <div className="flex flex-col space-y-2">
-            <div className="font-bold">{quote[0].author}</div>
-            <div><p className="text-muted-foreground">{quote[0].quote}</p></div>
-          </div>
+        {/* <Suspense fallback={<div>Loading tasks...</div>}>
+          <TaskList />
+        </Suspense> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <CourseSchedule />
+          <ProjectTracker />
         </div>
-        {/* Commitments  */}
-        <Dashboard/>
       </div>
+      <div className="space-y-4">
+        <StudyTimer />
+        <JobApplicationTracker />
+        <TechNewsFeed />
       </div>
-    </section>
+    </div>
+  </div>
   );
 }
 

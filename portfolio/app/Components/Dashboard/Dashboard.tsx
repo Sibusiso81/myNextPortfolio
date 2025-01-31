@@ -2,7 +2,6 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Check } from "lucide-react";
-import { getWeather } from "@/lib/data";
  function Dashboard() {
   type commitment = string[];
   const [commitmentType, setCommitmentType] = React.useState<string>("Daily");
@@ -59,7 +58,7 @@ import { getWeather } from "@/lib/data";
           <ul className="space-y-2">
             <h3 className="text-md md:text-lg font-bold">{commitmentType}</h3>
             {commitmentText.map((commitment, index) => (
-              <div className="flex flex-row space-x-2 space-y-1 items-center">
+              <div className="flex flex-row space-x-2 space-y-1 items-center" key={index}>
                 <Check />
                 <li key={index} className="text-sm md:text-md font-mono">
                   {commitment}

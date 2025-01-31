@@ -1,131 +1,97 @@
+import Image from "next/image"
+import React from "react"
+import Nextjs from "../Components/Svg/next"
+import HTML5 from "../Components/Svg/html"
+import SkillProgress from "./skillsProgress"
+import CSS from "../Components/Svg/css"
+import JavaScript from "../Components/Svg/javascript"
+import TailwindCSS from "../Components/Svg/tailwind"
+import Supabase from "../Components/Svg/supabase"
 
-import Image from "next/image";
-import React from "react";
+function AboutPage() {
+  const skills = [
+    { name: "HTML5", icon: <HTML5 className="w-16 h-16" />, level: 90 },
+    { name: "CSS", icon: <CSS className="w-16 h-16" />, level: 85 },
+    { name: "JavaScript", icon: <JavaScript className="w-16 h-16" />, level: 80 },
+    { name: "Tailwind CSS", icon: <TailwindCSS className="w-16 h-16" />, level: 85 },
+    { name: "Next.js", icon: <Nextjs className="w-16 h-16" />, level: 75 },
+    { name: "Supabase", icon: <Supabase className="w-16 h-16" />, level: 70 },
+  ]
 
-import JavaScript from "../Components/Svg/javascript";
-import CSS from "../Components/Svg/css";
-
-import TailwindCSS from "../Components/Svg/tailwind";
-import Nextjs from "../Components/Svg/next";
-import Supabase from "../Components/Svg/supabase";
-import HTML5 from "../Components/Svg/html";
-import Stack from "../Components/Stack/srack";
-
-
-
-function page() {
   return (
-  <>
-  
-    <section className=" h-fit  flex flex-col   space-y-4 max-w-screen-sm place-items-start mx-auto p-4 md:text-md  ">
-      <h1 className="text-lg ">About</h1>
-      <p>A few things you should know</p>
-
-      <div className="flex flex-col lg:flex-row text-start w-full h-fit text-sm space-y-6 ">
-        <div>
-          <p>Intro</p>
-        </div>
-        <div className="w-full h-fit space-y-3 ">
-          <div className="max-h-max 
-          ">
-          {/* <Image
-            alt="hero-profile-image"
-            src="https://i.ibb.co/TYBwyQ7/IMG-6708.jpg"
-            width={200}
-            height={200}
-            style={{
-              maxWidth: "100%",
-              height: "40%",
-            }}
-            className="rounded-lg object-cover w-full  md:hidden "
-            priority
-          /> */}
-          <Image
-            alt="hero-profile-image"
-            src="https://i.ibb.co/Y23gG4W/IMG-2894.jpg"
-            width={400}
-            height={400}
-            style={{
-              maxWidth: "100%",
-              height: "100%",
-            }}
-            sizes="100vw"
-            className="rounded-lg object-center lg:object-center w-full max-h-fit sm:hidden md:block "
-            priority
-          />
+    <div className="min-h-screen bg-gray-50">
+      <main className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <section className="mb-16">
+          <h1 className="text-4xl font-bold mb-4">About Me</h1>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/3">
+              <Image
+                alt="Profile image"
+                src="https://i.ibb.co/Y23gG4W/IMG-2894.jpg"
+                width={400}
+                height={400}
+                className="rounded-lg object-cover w-full h-auto shadow-lg"
+                priority
+              />
+            </div>
+            <div className="md:w-2/3">
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                I&apos;m a determined and curious individual with a drive to make a meaningful impact through my work. My
+                journey combines my human resources background with my self-taught web development skills, allowing me
+                to explore creative and practical solutions to real-world problems.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                I&apos;m passionate about applying my knowledge to improve lives, whether by building accessible digital
+                tools, enhancing education through technology, or supporting the growth of the township economy. I
+                thrive at the intersections of ideas, combining innovation and inclusivity to address pressing
+                challenges.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                For me, it&apos;s not just about learning but applying what I know to build solutions that matter. I see
+                every project as a chance to grow, innovate, and leave a lasting impact. This is my journey, and I&apos;m
+                excited to keep pushing boundaries, one meaningful project at a time.
+              </p>
+            </div>
           </div>
-          <p className="text-pretty md:text-md ">
-            I&apos;m a determined and curious individual with a drive to make a
-            meaningful impact through my work. My journey combines my human
-            resources background with my self-taught web development skills,
-            allowing me to explore creative and practical solutions to
-            real-world problems.
-            <br />
-            <br />
-            I&apos;m passionate about applying my knowledge to improve lives,
-            whether by building accessible digital tools, enhancing education
-            through technology, or supporting the growth of the township
-            economy. I thrive at the intersections of ideas, combining
-            innovation and inclusivity to address pressing challenges.
-            <br />
-            <br />
-            My experiences, including participating in hackathons and working on
-            collaborative projects, reflect my commitment to sustainability and
-            making technology accessible to all. I believe in being resourceful,
-            using free tools and solutions effectively, and adapting as
-            opportunities grow.
-            <br />
-            <br />
-            For me, it&apos;s not just about learning but applying what I know
-            to build solutions that matter. I see every project as a chance to
-            grow, innovate, and leave a lasting impact. This is my journey, and
-            I&apos;m excited to keep pushing boundaries, one meaningful project
-            at a time
-          </p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8">Skills</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skills.map((skill) => (
+              <SkillProgress key={skill.name} name={skill.name} icon={skill.icon} level={skill.level} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8">Education</h2>
+          <div className="space-y-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Bachelor of Human Resources Management</h3>
+              <p className="text-gray-600 mb-2">University of Johannesburg</p>
+              <p className="text-gray-500">In Progress</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">National Senior Certificate</h3>
+              <p className="text-gray-600 mb-2">Phoenix College of Johannesburg</p>
+              <p className="text-gray-500">Obtained in 2020</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm mb-4 md:mb-0">© 2024 Sibusiso Zulu</p>
+            <p className="text-sm">Made with care and plenty of coffee</p>
+          </div>
         </div>
-      </div>
-    <div className="grid grid-cols-4 w-full p-2  gap-y-4 md:gap-x-4">
-      <h1 className="col-span-4">Stack</h1>
-    <Stack 
-    svg={<HTML5 className="w-28 h-28 mx-auto "/>}
-    name="HTML5"
-    discription="Language"
-    />
-    <Stack 
-    svg={<CSS className="w-28 h-28 mx-auto "/>}
-    name="CSS"
-    discription="Language"
-    />
-    <Stack 
-    svg={<JavaScript className="w-28 h-28 mx-auto "/>}
-    name="Javascript"
-    discription="Language"
-    /><Stack 
-    svg={<TailwindCSS className="w-28 h-28 mx-auto "/>}
-    name="Tailwind CSS"
-    discription="Framework"
-    /><Stack 
-    svg={<Nextjs className="w-28 h-28 mx-auto "/>}
-    name="Next js"
-    discription="Framework"
-    />
-    <Stack 
-    svg={<Supabase className="w-28 h-28 mx-auto "/>}
-    name="Supabase"
-    discription="Database"
-    />
+      </footer>
     </div>
-    <div className="w-full h-[2px] bg-neutral-800 "></div>
-        <div className="flex flex-row md:flex-row justify-between p-2 text-xs md:text-sm text-wrap space-x-4 md:p-4 w-full">
-         
-          <p>@ 2024 Sibusiso Zulu</p>
-          <p>Made with care and plenty coffee</p>
-        </div>
-     
-    </section>
-   
-  </>
-  );
+  )
 }
 
-export default page;
+export default AboutPage
+
