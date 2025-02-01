@@ -1,140 +1,94 @@
-'use client'
-import {
-   
-    Code,
-    GithubIcon,
-    Linkedin,
-    Mail,
-    
-  } from "lucide-react";
-import React, { useEffect, useState } from 'react'
-import Footer from '../Footer/Footer'
+"use client";
+import { MessagesSquare  } from "lucide-react";
+import React  from "react";
+import Footer from "../Footer/Footer";
 import Link from "next/link";
-import { BorderBeam } from "@/components/ui/border-beam";
 import WordRotate from "@/components/ui/word-rotate";
+import { Button } from "@/components/ui/button";
+import LinkedIn from "../Svg/linkdin";
+import Instagram from "../Svg/instagram";
+import Gmail from "../Svg/mail";
+import Github from "../Svg/github";
+import Image from "next/image";
 function Contact() {
-    const [time, setTime] = useState<string>();
+
+
  
 
-    function getTime() {
-      const date = new Date();
-      const hours = date.getHours();
-      const mins = date.getMinutes();
-      
-      console.log(
-        `current time :${hours % 12 || 12}:${mins < 10 ? "0" : ""}${mins}`
-      );
-      setTime(
-        `${hours % 12 || 12}:${mins < 10 ? "0" : ""}${mins} ${
-          hours >= 12 ? "PM" : "AM"
-        }`
-      );
-  
-    }
-    useEffect(() => {
-      getTime();
-      const interavalid = setInterval(getTime, 60000);
-      return () => clearInterval(interavalid);
-    }, []);
-   
   return (
-    <section className="w-screen h-fit  flex flex-col lg:pace-x-10 p-2 text-black dark:text-white  ">
-        <div className="grid grid-cols-2 gap-y-4 lg:p-10">
-          <div className="col-span-2 lg:col-span-1 flex lg:items-center   lg:w-fit">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl lg:my-auto font-bold hidden lg:block">
-              Let&apos;s <br />
-              <WordRotate words={["Work", "Create", "Grow"]} />
-              Together.
-            </h1>
+    <section className="dark:bg-[#63636633] bg-neutral-900/65  w-full   flex flex-col lg:pace-x-10 p-2 lg:p-6 text-white   ">
+      <div className="grid grid-cols-1 md:grid-cols-2 p-2   gap-y-10 flex-1   ">
+        <div className="flex flex-col font-bold t  justify-evenly  gap-4">
+          <div className="flex flex-col items-start text-[14px]  lg:text-[28px]  w-2/3">
+            <p className="text-[20px]  lg:text-[26px]">Think I&apos;d be a good fit for your team or project ? </p>
+            <Button variant={"ghost"} className="w-fit rounded-lg px-0 place-self-start">
+  <div className="flex flex-row space-x-2 items-center text-lg font-bold">
+    <p>Let&apos;s</p>
+    <span className=""> {/* Adjust width based on longest word */}
+      <WordRotate
+        words={["Work", "Create", "Grow", "Innovate", "Connect"]}
+      />
+       
+    </span>
+   
+  </div>
+</Button>
+            
           </div>
-          <div className="w-full col-span-2 lg:col-span-1  grid grid-cols-4 md:gap-x-4  gap-y-6">
-            <div className="col-span-4 md:col-span-2 gap-y-4 ">
-              <Link href={"/Contact"}>
-                <div className="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-                  <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-                    Contact
-                  </span>
-                  <BorderBeam
-                    size={200}
-                    duration={12}
-                    colorFrom="#ececec"
-                    colorTo="#0f0f0f00"
-                    delay={9}
-                    className="bg-neutral-800 p-10 "
-                  />
-                </div>
-              </Link>
-            </div>
+          <div className="flex flex-col space-y-3 w-fit ">
+            <h3 className="text-lg">SOCIALS</h3>
+            <div className="grid grid-cols-2 text-sm md:text-md  gap-2 font-medium">
+              <Link href={'https://www.linkedin.com/in/sibusiso-zulu/'}>
+              <div className="flex flex-row space-x-2  items-center">
+              <LinkedIn/>  <p>Lindedin</p>
+              </div></Link>
+             <Link href={'https://github.com/Sibusiso81'}>
+             <div className="flex flex-row space-x-2 items-center">
+             <Github/> <p>Github</p>
+                
+              </div></Link>
 
-            <div className="col-span-4 md:col-span-2 text-center text-md border-neutral-800  border-2  spcae-y-6 gap-y-2 md:gap-2 rounded-lg">
-              <div className="border-2 lg:border-0 border-neutral-800 rounded-lg font-bold p-10">
-                <p>{time}</p>
-                <p>Johannesburg&#44;SA</p>
+              <a href="mailto:example@email.com?subject=Let's Connect&body=Hi, I'd like to discuss opportunities!">
+              <div className="flex flex-row space-x-2 items-center">
+              <Gmail/> <p>Email</p>
+                
               </div>
-              <div className="flex flex-row justify-between  mt-2 ">
-                {/* <div className="border-2 lg:border-0border-1 border-neutral-800 rounded-lg p-5">
-        <Linkedin />
-        </div> */}
-                <div className="border-2 lg:border-0 border-neutral-800 rounded-lg p-4   lg:rounded-2xl  ">
-                  <Linkedin />
-                </div>
-                <div className="border-2 lg:border-0 border-neutral-800 rounded-lg p-4   lg:rounded-2xl ">
-                  <Mail />
-                </div>
-                <div className="border-2 lg:border-0 border-neutral-800 rounded-lg p-4   lg:rounded-2xl ">
-                  <GithubIcon />
-                </div>
-                <div className="border-2 lg:border-0 border-neutral-800 rounded-lg p-4">
-                  <Code />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-span-6 text-black dark:text-white space-y-3 border-2 border-neutral-800  p-10 rounded-lg">
-              <h1 className="text-[#0f0f0f0] font-semibold text-xl text-pretty">
-                Check these link before you head Out
-              </h1>
-              <p className="text-[#0f0f0f0] font-semibold text-md mt-2">
-                Index
-              </p>
-              <ul className=" lg:p-4 w-72 max-w-screen-sm grid grid-cols-2 gap-1 text-sm lg:text-md">
-                <li>
-                  <a href="#Home">Home</a>
-                </li>
-
-                <li>
-                  <a href="#About">About</a>
-                </li>
-                <li>
-                  <a href="#Skills">Value</a>
-                </li>
-                <li>
-                  <a href="#Contact">Project</a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/sanele-ncube-823221236/"
-                    target="_blank"
-                  >
-                    Linkdin
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:masanzawayne@gmail.com?subject=I would like to colleborate or work together">
-                    Email
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-span-4">
-              <div className="col-span-6"></div>
+              </a>
+              <Link href={'https://www.instagram.com/_.iamsbu/'}>
+             <div className="flex flex-row space-x-2 items-center">
+             <Instagram/>  <p>Instagram</p>
+                
+              </div></Link>
+              <Link href={'/Contact'}>
+             <div className="flex flex-row space-x-2 items-center">
+             <MessagesSquare/> <p>Chat</p>
+                
+              </div></Link>
+              
+              
             </div>
           </div>
         </div>
-        <Footer />
-    
-      </section>
-  )
+        <div className="flex flex-col md:mx-auto my-auto">
+          <div className="pl-6 w-1/2 text-wrap">
+          <h1 className="text-[18px]  lg:text-[26px] font-bold ">SIBUSISO ZULU</h1>
+          <h2 className="text-[12px]  lg:text-[18px] font-bold text-[#a1a0a633] text-wrap">Final-year HRM student & Frontend web developer eager to gain practical insights.</h2>
+          </div>
+           <Image
+                        alt="hero-profile-image"
+                        src="https://i.ibb.co/KcZbn2Sg/IMG-7560.jpg"
+                        width={250}
+                        height={250}
+                        
+                        className="mx-auto lg:mx-10 object-cover  "
+                        priority
+                      />
+                      
+        </div>
+      </div>
+      <Footer  />
+    </section>
+  );
 }
 
-export default Contact
+export default Contact;

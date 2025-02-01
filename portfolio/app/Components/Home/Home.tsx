@@ -9,14 +9,14 @@ import { ModeToggle } from '../mode-toggle';
 function Home() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <section className="w-screen font-dmsans h-fit  p-4 pt-4 bg-white dark:bg-neutral-950 text-black dark:text-[#eaeaea] overflow-x-hidden ">
+    <section className="w-screen font-dmsans h-fit  p-4 pt-4   dark:bg-neutral-950 text-[#eaeaea] overflow-x-hidden ">
         <div className="w-full p-2 border-[#eaeaea] flex justify-between items-center rounded-md relative z-40 flex-1">
-          <h1 className="font-bold dark:text-[#eaeaea] text-lg text-black">
+          <h1 className="font-bold text-[#eaeaea] text-lg ">
             Portfolio®
           </h1>
           <div className="flex flex-row space-x-2 items-center">
             
-            <ModeToggle/>
+            <ModeToggle />
             <Menu
               className={`cursor-pointer ${isOpen ? "hidden" : ""}`}
               onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +77,7 @@ function Home() {
             </h1>
           </div>
         </div>
-        <div className="w-full h-[2px] bg-neutral-800  mt-20 md:mt-32 lg:mt-48 xl:mt-72  "></div>
+        <div className="w-full h-[2px] bg-[#a1a0a633]  mt-20 md:mt-32 lg:mt-48 xl:mt-72  "></div>
         <div className="flex flex-col md:flex-row justify-between p-2">
           {/* <p>Based on Johannesburg &#44;South Africa</p> */}
           <p>Based in Johannesburg &#44;South Africa</p>

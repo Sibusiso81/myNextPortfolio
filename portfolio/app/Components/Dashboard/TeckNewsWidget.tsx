@@ -15,6 +15,7 @@ export function TechNewsFeed() {
   useEffect(() => {
     // In a real application, you would fetch this data from an API
     getNews().then(data => setNews(data));
+    console.log(news)
   }, []);
 
   return (

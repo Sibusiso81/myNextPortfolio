@@ -7,7 +7,7 @@ type info={
 
 function Card(information:info) {
   return (
-    <section className='overflow-y-hidden max-w-screen-sm items-center justify-center'>
+    <section className='dark:bg-neutral-950 overflow-y-hidden max-w-screen-sm items-center justify-center'>
     <div className='flex flex-col w-full p-4 '>
      <div className='flex flex-row justify-between md:space-x-2'>
      <div className='text-pretty '>

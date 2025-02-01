@@ -67,6 +67,13 @@ function Navbar() {
       <section className="w-full h-full absolute inset-0 flex justify-center items-center z-30 p-1 font-dmsans">
         <ul className="w-[900px] leading-none space-y-2">
           <li className="overflow-hidden">
+          <motion.div variants={navLink} initial='hidden' animate='show' exit='exit' className=" p-1">
+              <Link href={'/'} className="text-[40px] md:text-[60px] hover:text-[#eaeaea] h-fit p-1 ">
+              Home
+              </Link>
+            </motion.div>
+            </li>
+            <li className="overflow-hidden">
             <motion.div variants={navLink} initial='hidden' animate='show' exit='exit' className=" p-1">
               <Link href={'/About'} className="text-[40px] md:text-[60px] hover:text-[#eaeaea] h-fit p-1 ">
               About
