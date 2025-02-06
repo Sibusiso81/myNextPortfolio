@@ -33,12 +33,12 @@ function ValueAdd() {
   ];
   return (
     <section className="w-screen h-fit    p-4  lg:p-20 font-mono  ">
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full">
       <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold  ">
         Value Add On&apos;s 
       </h1>
-      <h1 className=" text-lg md:text-xl lg:text-2xl font-bold space-y-6 pb-14 lg:pb-20 text-muted-foreground">
-       The value i bring  your team
+      <h1 className=" text-sm md:text-md lg:text-xl font-bold space-y-6 pb-14 lg:pb-20 text-muted-foreground text-wrap w-1/2">
+       My contributions to  your team
       </h1>
       </div>
       <div className="grid grid-cols-4 gap-6 lg:gap-2">

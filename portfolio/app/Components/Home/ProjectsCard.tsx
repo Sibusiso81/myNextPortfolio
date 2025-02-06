@@ -64,7 +64,7 @@ function ProjectsCard(card:card) {
             aria-label="Visit live site"
             target="_blank"
           >
-            <Button variant={'link'} className="text-muted-foreground">Visit site <ArrowUpRight className="stroke-muted-foreground"/>
+            <Button variant={'link'} className="text-green-400 ">Visit site <ArrowUpRight className="stroke-green-400 "/>
             </Button>
           </Link>
         </div>
