@@ -50,7 +50,7 @@ function About() {
         {/* About header/ image / title text */}
         <div className="flex flex-col text-nowrap lg:space-y-4">
           <h1 className="text-[30px] lg:text-[38px] font-bold">About me</h1>
-          <h2 className="text-[28px] lg:text-[28px] font-bold text-[#a1a0a633]">
+          <h2 className="text-[28px] lg:text-[28px] font-bold  bg-gradient-to-r from-neutral-400 to-[#a1a0a633]  bg-clip-text text-transparent">
             Your next HR Asset
           </h2>
         </div>

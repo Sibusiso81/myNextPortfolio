@@ -37,7 +37,7 @@ function ValueAdd() {
       <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold  ">
         Value Add On&apos;s 
       </h1>
-      <h1 className=" text-sm md:text-md lg:text-xl font-bold space-y-6 pb-14 lg:pb-20 text-muted-foreground text-wrap w-1/2">
+      <h1 className=" text-sm md:text-md lg:text-xl font-bold space-y-6 pb-14 lg:pb-20 text-wrap w-1/2  bg-gradient-to-r from-neutral-300 to-[#a1a0a633]  bg-clip-text text-transparent">
        My contributions to  your team
       </h1>
       </div>

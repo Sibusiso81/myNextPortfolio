@@ -20,23 +20,23 @@ function Contact() {
       <div className="grid grid-cols-1 md:grid-cols-2 p-2   gap-y-10 flex-1   ">
         <div className="flex flex-col font-bold t  justify-evenly  gap-4">
           <div className="flex flex-col items-start text-[14px]  lg:text-[28px]  w-2/3">
-            <p className="text-[20px]  lg:text-[26px]">Think I&apos;d be a good fit for your team or project ? </p>
+            <p className="text-[20px]  lg:text-[22px] ">Think I&apos;d be a good fit for your team or project ? </p>
             <Button variant={"ghost"} className="w-fit rounded-lg px-0 place-self-start">
-  <div className="flex flex-row space-x-2 items-center text-lg font-bold">
-    <p>Let&apos;s</p>
-    <span className=""> {/* Adjust width based on longest word */}
-      <WordRotate
-        words={["Work", "Create", "Grow", "Innovate", "Connect"]}
-      />
-       
-    </span>
-   
-  </div>
+
 </Button>
             
           </div>
           <div className="flex flex-col space-y-3 w-fit ">
-            <h3 className="text-lg">SOCIALS</h3>
+            <h3 className="text-lg"> <div className="flex flex-row space-x-2 items-center text-lg font-bold">
+    <p>Let&apos;s</p>
+    <span className=""> {/* Adjust width based on longest word */}
+      <WordRotate
+        words={["Work", "Create", "Grow", "Innovate", "thrive",'Build']}
+      />
+       
+    </span>
+   <p>together</p>
+  </div></h3>
             <div className="grid grid-cols-2 text-sm md:text-md  gap-2 font-medium">
               <Link href={'https://www.linkedin.com/in/sibusiso-zulu/'}>
               <div className="flex flex-row space-x-2  items-center">
@@ -72,7 +72,7 @@ function Contact() {
         <div className="flex flex-col md:mx-auto my-auto">
           <div className="pl-6 w-1/2 text-wrap">
           <h1 className="text-[18px]  lg:text-[26px] font-bold ">SIBUSISO ZULU</h1>
-          <h2 className="text-[12px]  lg:text-[18px] font-bold text-[#a1a0a633] text-wrap">Final-year HRM student & Frontend web developer eager to gain practical insights.</h2>
+          <h2 className="text-[12px]  lg:text-[18px] font-bold  bg-gradient-to-r from-neutral-200 to-[#a1a0a633]  bg-clip-text text-transparent text-wrap">Final-year HRM student & Frontend web developer eager to gain practical insights.</h2>
           </div>
            <Image
                         alt="hero-profile-image"

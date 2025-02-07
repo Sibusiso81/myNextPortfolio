@@ -47,8 +47,8 @@ function Home() {
               priority
             />
 
-            <div className="text-lg font-mono  items-end place-self-end space-y-1">
-              <h1 className="font-bold">Sibusiso Zulu</h1>
+            <div className="text-lg font-mono  items-end place-self-end space-y-1 ">
+              <h1 className="font-bold ">Sibusiso Zulu</h1>
               <div className="flex flex-row  space-x-1 place-self-end">
                 <div className="w-fit my-auto place-self-center">
                   <div
@@ -58,7 +58,7 @@ function Home() {
                   />
                 </div>
                 <div className="my-auto place-self-end">
-                  <p className="text-sm lg:text-md text-nowrap">
+                  <p className="text-sm lg:text-md text-nowrap ">
                     Available for new opportunities
                   </p>
                 </div>
@@ -67,7 +67,7 @@ function Home() {
           </div>
           {/* Home text */}
           <div className=" font-bold font-mono pt-10 max-w-screen-lg lg:justify-center mx-auto">
-            <h1 className="text-xl md:text-3xl ">
+            <h1 className="text-xl md:text-3xl  ">
              An aspiring Human Resources Managment practitioner
               with a passion for fostering connections and building impactful
               solutions., On my path toward mastering the art of people
@@ -78,7 +78,7 @@ function Home() {
           </div>
         </div>
         <div className="w-full h-[2px] bg-[#a1a0a633]  mt-20 md:mt-32 lg:mt-48 xl:mt-72  "></div>
-        <div className="flex flex-col md:flex-row justify-between p-2">
+        <div className="flex flex-col md:flex-row justify-between p-2 ">
           {/* <p>Based on Johannesburg &#44;South Africa</p> */}
           <p>Based in Johannesburg &#44;South Africa</p>
           <div className="flex flex-row space-x-1">

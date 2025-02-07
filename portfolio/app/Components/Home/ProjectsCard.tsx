@@ -19,8 +19,13 @@ function ProjectsCard(card:card) {
   return (
     <div className="   flex flex-col space-y-4 ">
     <div className="space-y-3 w-full">
-        
-      <Image
+    <Link
+            href={card.siteLink}
+            title="Visit project site"
+            aria-label="Visit live site"
+            target="_blank"
+          >
+            <Image
         src={card.image}
         alt="project-image"
         width={700}
@@ -30,7 +35,8 @@ function ProjectsCard(card:card) {
           maxHeight: "100%",
         }}
         className="w-full h-full "
-      />
+      /></Link> 
+      
     </div>
     <div className="flex flex-col  ">
       <div className="flex flex-row space-x-2  ">
@@ -60,7 +66,7 @@ function ProjectsCard(card:card) {
           </Link>
           <Link
             href={card.siteLink}
-            title="View the GitHub repository"
+            title="Visit project site"
             aria-label="Visit live site"
             target="_blank"
           >
