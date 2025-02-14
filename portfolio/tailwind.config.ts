@@ -12,6 +12,7 @@ export default {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+			
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -74,7 +75,18 @@ export default {
   				'100%': {
   					'offset-distance': '100%'
   				}
-  			}
+  			},
+			  "fade-up": {
+				"0%": {
+				  opacity: "0",
+				  transform: "translateY(10px)",
+				},
+				"100%": {
+				  opacity: "1",
+				  transform: "translateY(0)",
+				},
+			  },
+			  
   		}
   	}
   },

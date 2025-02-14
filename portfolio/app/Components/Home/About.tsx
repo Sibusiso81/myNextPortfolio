@@ -48,9 +48,9 @@ function About() {
     <section className="w-screen h-screen flex flex-col p-3 dark:bg-neutral-950 md:p-20 lg:p-24 lg:pl-44 xl:pl-52 justify-center space-y-4 mt-32">
       <div className="grid grid-cols-2 md:text-lg lg:text-2xl gap-6">
         {/* About header/ image / title text */}
-        <div className="flex flex-col text-nowrap lg:space-y-4">
-          <h1 className="text-[30px] lg:text-[38px] font-bold">About me</h1>
-          <h2 className="text-[28px] lg:text-[28px] font-bold  bg-gradient-to-r from-neutral-400 to-[#a1a0a633]  bg-clip-text text-transparent">
+        <div className="flex flex-col  lg:space-y-4 ">
+          <h1 className="text-[30px] lg:text-[38px] font-bold text-nowrap">About me</h1>
+          <h2 className="text-[20px] lg:text-[28px] font-bold  bg-gradient-to-r from-neutral-400 to-[#a1a0a633]  bg-clip-text text-transparent">
             Your next HR Asset
           </h2>
         </div>

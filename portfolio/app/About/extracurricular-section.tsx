@@ -54,8 +54,8 @@ export default function ExtracurricularSection() {
     setCurrentIndex((prev) => (prev + 1) % activities.length)
   }
   return (
-    <section className="w-full  px-4 py-16">
-      <div className="container mx-auto max-w-4xl">
+    <section className="w-full   px-4 py-16">
+      <div className="container  mx-auto max-w-4xl">
         <div className="mb-12 flex items-center justify-between">
           <h2 className="text-2xl font-medium text-white">Extracurricular Activities</h2>
           <div className="flex gap-2">
@@ -63,7 +63,7 @@ export default function ExtracurricularSection() {
               variant="ghost"
               size="icon"
               onClick={handlePrevious}
-              className="h-8 w-8 rounded-full text-gray-400 hover:text-white"
+              className="h-8 w-8 rounded-full text-gray-400 "
               aria-label="Previous activity"
             >
               <ChevronLeft className="h-4 w-4" />
@@ -72,7 +72,7 @@ export default function ExtracurricularSection() {
               variant="ghost"
               size="icon"
               onClick={handleNext}
-              className="h-8 w-8 rounded-full text-gray-400 hover:text-white"
+              className="h-8 w-8 rounded-full text-gray-400 "
               aria-label="Next activity"
             >
               <ChevronRight className="h-4 w-4" />
@@ -89,7 +89,7 @@ export default function ExtracurricularSection() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="  ">
+              <Card className="   bg-[#a1a0a633] dark:bg-neutral-950 text-[#eaeaea] ">
                 <CardContent className="grid gap-6 p-6 sm:grid-cols-2">
                   <div className="relative h-fit overflow-hidden rounded-lg sm:aspect-square">
                     <Image
