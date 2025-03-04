@@ -40,183 +40,79 @@ export default function Page() {
       
         <TableOfContents/>
         <article className="min-h-screen mx-auto max-w-[80ch] w-[80vw] ">
-          <h1>Introducing SynapseGPT: The Next Generation AI Foundation Model</h1>
-          <section>
-            <p>
-              We are thrilled to announce the launch of SynapseGPT, our
-              groundbreaking AI foundation model that promises to redefine the
-              landscape of artificial intelligence. SynapseGPT represents the
-              culmination of years of cutting-edge research and development in
-              deep learning and natural language processing. This model is
-              designed to push the boundaries of what AI can achieve, offering
-              unprecedented capabilities and flexibility across a multitude of
-              applications.
-            </p>
-            <p>
-              Our team has worked tirelessly to build a model that not only meets
-              the current needs of various industries but also anticipates future
-              advancements. SynapseGPT is poised to become an indispensable tool
-              for businesses, researchers, and developers alike. Whether you are
-              looking to enhance customer interactions, automate complex
-              processes, or generate insightful data analyses, SynapseGPT is
-              equipped to deliver exceptional results.
-            </p>
-          </section>
-          <TrackedSection 
-          sectionId={0}
-          tocTitle="Unmatched Capabilities"
-          isFirst    
-          >
-            <h2>Unmatched Capabilities and Versatility</h2>
-            <p>
-              SynapseGPT sets a new standard for versatility in AI, offering
-              capabilities that go far beyond traditional language processing. At
-              its core, SynapseGPT excels in language understanding, enabling it
-              to grasp nuanced meanings and contextual subtleties across different
-              languages and dialects. This makes it an invaluable asset for global
-              companies that operate in diverse linguistic environments.
-            </p>
-            <p>
-              In addition to its language processing prowess, SynapseGPT is a
-              powerful tool for content generation. It can produce high-quality,
-              coherent, and contextually relevant content tailored to any purpose,
-              whether it&apos;s crafting engaging marketing copy, creating detailed
-              technical documentation, or writing personalized emails. This
-              versatility makes SynapseGPT a vital resource for content creators,
-              marketers, and communicators.
-            </p>
-            <p>
-              Furthermore, SynapseGPT&apos;s data analysis capabilities allow users to
-              extract meaningful insights from complex datasets. By leveraging
-              advanced analytical tools, businesses can uncover hidden patterns,
-              predict future trends, and make data-driven decisions with
-              confidence. SynapseGPT&apos;s ability to process and integrate data from
-              various sources, including text, images, and audio, ensures a
-              comprehensive approach to problem-solving.
-            </p>
-            <p>
-              Another notable feature of SynapseGPT is its proficiency in powering
-              conversational agents. It enables intelligent, human-like
-              interactions in chatbots and virtual assistants, significantly
-              enhancing customer service experiences. By understanding and
-              responding to user queries with accuracy and empathy, SynapseGPT
-              helps businesses build stronger relationships with their customers.
-            </p>
-          </TrackedSection>
-          <TrackedSection sectionId={1} tocTitle="Cutting-Edge Tech">
-            <h2>Cutting-Edge Technology Under the Hood</h2>
-            <p>
-              The power of SynapseGPT lies in its state-of-the-art architecture
-              and training methodology. At its foundation is a highly optimized
-              version of the transformer architecture, which ensures superior
-              performance and scalability. This architecture allows SynapseGPT to
-              handle vast amounts of data and complex tasks with ease, making it
-              suitable for large-scale deployments.
-            </p>
-            <p>
-              SynapseGPT also features multi-modal integration, enabling it to
-              seamlessly process and combine data from various sources. This
-              capability is particularly valuable in applications that require a
-              holistic approach, such as analyzing customer feedback across
-              different channels or integrating visual and textual information for
-              comprehensive insights.
-            </p>
-            <p>
-              One of the standout features of SynapseGPT is its ability to be
-              fine-tuned and customized. Businesses and developers can easily
-              adapt the model to meet specific industry needs with minimal data.
-              Whether you&apos;re in healthcare, finance, education, or entertainment,
-              SynapseGPT can be tailored to provide solutions that address your
-              unique challenges and requirements.
-            </p>
-          </TrackedSection>
-          <TrackedSection sectionId={2} tocTitle="Real-World">
-            <h2>Real-World Applications and Impact</h2>
-            <p>
-              SynapseGPT is already making a significant impact across a wide
-              range of industries. In healthcare, for example, it enhances
-              diagnostic accuracy and patient care by providing AI-driven medical
-              insights and predictive analytics. By analyzing patient data and
-              medical literature, SynapseGPT can assist healthcare professionals
-              in making more informed decisions and identifying potential health
-              risks early on.
-            </p>
-            <p>
-              In the financial sector, SynapseGPT streamlines operations, detects
-              fraud, and offers personalized financial advice. Its ability to
-              analyze large datasets in real-time allows financial institutions to
-              identify fraudulent activities more quickly and accurately.
-              Additionally, SynapseGPT can provide tailored financial
-              recommendations based on individual customer profiles, improving
-              customer satisfaction and loyalty.
-            </p>
-            <p>
-              The education industry also benefits from SynapseGPT&apos;s capabilities.
-              It personalizes learning experiences, automates administrative
-              tasks, and supports educators with AI-generated content. By
-              understanding students&apos; unique learning needs and preferences,
-              SynapseGPT helps create customized educational materials and
-              learning paths, enhancing the overall learning experience.
-            </p>
-            <p>
-              In the entertainment industry, SynapseGPT revolutionizes content
-              creation. It can write scripts, generate music, and create immersive
-              virtual environments, opening up new possibilities for creative
-              professionals. By leveraging AI to handle repetitive and
-              time-consuming tasks, artists and creators can focus on what they do
-              best: creating compelling and original content.
-            </p>
-          </TrackedSection>
-          <TrackedSection sectionId={3} tocTitle="Our Commitment">
-            <h2>Our Commitment to Ethical AI</h2>
-            <p>
-              At [Company Name], we understand that with great power comes great
-              responsibility. The development of SynapseGPT has been guided by a
-              strong emphasis on ethical considerations. We are committed to
-              ensuring that our AI solutions are fair, transparent, and
-              accountable.
-            </p>
-            <p>
-              One of our primary goals is to mitigate biases in AI outputs. We
-              have implemented advanced techniques to detect and reduce biases,
-              ensuring that SynapseGPT provides fair and equitable results. This
-              is particularly important in applications that impact people&apos;s
-              lives, such as hiring decisions, loan approvals, and medical
-              diagnoses.
-            </p>
-            <p>
-              We also prioritize data privacy and security. SynapseGPT adheres to
-              the highest standards of data protection, ensuring that user
-              information is safeguarded at all times. We believe that maintaining
-              user trust is crucial to the success of our AI solutions.
-            </p>
-            <p>
-              Transparency and accountability are also key components of our
-              ethical framework. We strive to promote transparency in AI
-              decision-making processes, making it easier for users to understand
-              how SynapseGPT arrives at its conclusions. Additionally, we maintain
-              accountability in the deployment of our AI solutions, ensuring that
-              any issues or concerns are promptly addressed.
-            </p>
-          </TrackedSection>
-          <TrackedSection sectionId={3} tocTitle="A future Powered by Synsepes" isLast>
-            <h2>A Future Powered by SynapseGPT</h2>
-            <p>
-              The launch of SynapseGPT marks a significant milestone in our
-              journey towards creating intelligent systems that enhance human
-              capabilities and drive innovation. We are excited to see how
-              SynapseGPT will transform industries, create new opportunities, and
-              unlock the full potential of artificial intelligence.
-            </p>
-            <p>
-              We invite you to explore the possibilities with SynapseGPT and join
-              us in shaping the future of AI. Stay tuned for more updates and
-              insights into how SynapseGPT is making a difference across various
-              sectors. Together, let&apos;s harness the power of AI to achieve greater
-              heights and build a better tomorrow.
-            </p>
-          </TrackedSection>
-        </article>
+      <h1>Facilitating the Performance Management Process with Large Language Models</h1>
+      <section>
+        <p>
+          Performance management is a structured, strategic process that enhances
+          organizational success by aligning individual performance with broader business goals.
+          Traditionally, this involves managers and employees collaborating to set expectations,
+          assess progress, and reward achievements.
+        </p>
+        <p>
+          This project translates core performance management principles into a digital application,
+          providing users with a structured approach to goal setting, task execution, self-assessment,
+          and continuous improvement. By leveraging AI and Large Language Models (LLMs), the system
+          functions as a virtual performance manager, mirroring the manager-employee relationship
+          in an interactive, self-directed format.
+        </p>
+      </section>
+      
+      <TrackedSection sectionId={0} tocTitle="Performance Management Fundamentals" isFirst>
+        <h2>Performance Management Fundamentals</h2>
+        <p>
+          Performance is the measure of work-related outputs, outcomes, and behaviors that contribute to
+          an individual&apos;s or organization&apos;s success. Effective performance management systems ensure alignment
+          with strategic goals by defining clear expectations, providing feedback, facilitating development, and
+          recognizing achievements.
+        </p>
+      </TrackedSection>
+      
+      <TrackedSection sectionId={1} tocTitle="Task Determination & Goal Setting">
+        <h2>Task Determination & Goal Setting</h2>
+        <p>
+          Task determination ensures that objectives are clear, measurable, and achievable. This system
+          structures tasks to be specific, significant, time-bound, achievable, and well-communicated.
+          Users describe their goals, and the application generates structured daily task lists with
+          time estimates, execution guidance, and potential challenges.
+        </p>
+      </TrackedSection>
+      
+      <TrackedSection sectionId={2} tocTitle="Performance Execution & Assessment">
+        <h2>Performance Execution & Assessment</h2>
+        <p>
+          Performance execution requires individuals to strive for results, display agreed-upon behaviors,
+          and engage in self-improvement. The application provides a Pomodoro Timer, a chatbot for assistance,
+          suggested resources, and a task history for tracking progress, ensuring accountability and
+          structured growth.
+        </p>
+      </TrackedSection>
+      
+      <TrackedSection sectionId={3} tocTitle="Performance Standards & Appraisals">
+        <h2>Performance Standards & Appraisals</h2>
+        <p>
+          Performance standards serve as benchmarks for evaluating success, measured through quantity,
+          quality, and time adherence. Users engage in self-assessments, receive AI-driven analytics,
+          and adjust their approach based on structured feedback and historical trends.
+        </p>
+      </TrackedSection>
+      
+      <TrackedSection sectionId={4} tocTitle="Application Summary & HRM Relevance">
+        <h2>Application Summary & HRM Relevance</h2>
+        <p>
+          This project integrates performance management theory with AI-powered solutions, reflecting HRM
+          principles such as performance planning, task alignment, execution monitoring, and performance review.
+          It reinforces academic and professional understanding of performance management processes.
+        </p>
+      </TrackedSection>
+      
+      <TrackedSection sectionId={5} tocTitle="Potential Enhancements" isLast>
+        <h2>Potential Enhancements</h2>
+        <p>
+          Future improvements include competency-based adaptability, visual goal-tracking dashboards,
+          and peer collaboration features, further optimizing the application&apos;s approach to performance management.
+        </p>
+      </TrackedSection>
+    </article>
       </main>
       </TOCContext.Provider>
     );
