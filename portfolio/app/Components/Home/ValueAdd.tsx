@@ -54,7 +54,7 @@ function ValueAdd() {
               </div>
               {/* Header */}
 
-              <div className="text-lg font-semibold py-2 lg:py-6">
+              <div className="text-4xl font-semibold py-2 lg:py-6">
                 <h1>{items.title}</h1>
               </div>
               {/* Description */}

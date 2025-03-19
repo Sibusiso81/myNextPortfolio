@@ -11,7 +11,7 @@ function Home() {
   return (
     <section className="w-screen font-dmsans h-fit  p-4 pt-4   dark:bg-neutral-950 text-[#eaeaea] overflow-x-hidden ">
         <div className="w-full p-2 border-[#eaeaea] flex justify-between items-center rounded-md relative z-40 flex-1">
-          <h1 className="font-bold text-[#eaeaea] text-lg ">
+          <h1 className=" font-bold text-[#eaeaea] text-lg ">
             Portfolio®
           </h1>
           <div className="flex flex-row space-x-2 items-center">
@@ -48,7 +48,7 @@ function Home() {
             />
 
             <div className="text-lg font-mono  items-end place-self-end space-y-1 ">
-              <h1 className="font-bold ">Sibusiso Zulu</h1>
+              <h1 className="text-lg font-bold ">Sibusiso Zulu</h1>
               <div className="flex flex-row  space-x-1 place-self-end">
                 <div className="w-fit my-auto place-self-center">
                   <div
@@ -67,7 +67,7 @@ function Home() {
           </div>
           {/* Home text */}
           <div className=" font-bold font-mono pt-10 max-w-screen-lg lg:justify-center mx-auto">
-            <h1 className="text-xl md:text-3xl  ">
+            <h1 className=" text-xl md:text-3xl  ">
              An aspiring Human Resources Managment practitioner
               with a passion for fostering connections and building impactful
               solutions., On my path toward mastering the art of people
