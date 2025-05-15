@@ -19,6 +19,9 @@ import { complileReachoutTemplate, sendMail } from "@/lib/mail";
 import { Toaster, toast } from "sonner";
 import { redirect } from "next/navigation";
 import Footer from "../Components/Footer/Footer";
+import { Menu, X } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
+import Navbar from "../Components/Home/Navbar";
 
 
 const formSchema = z.object({
@@ -37,6 +40,8 @@ const formSchema = z.object({
 
 
 export default function Page() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  
   useEffect(() => {
     // Only runs in the browser
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -49,40 +54,57 @@ export default function Page() {
   
 
   return (
-    <main className="overflow-x-hidden">
-      <section
-        className="w-screen max-w-screen-sm lg:max-w-screen-lg h-fit flex flex-col lg:flex-row p-4 space-y-6 lg:pl-6 lg:p-20
-      xl:max-w-screen-2xl xl:justify-around"
-      >
-        <Toaster position={isMobile ? "bottom-center" : "top-right"} />
-        <div className="flex flex-col space-y-3 lg:w-1/2">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-screen-sm">
-            Reach out ✦
-          </h1>
-          <p className="text-muted-foreground text-xs md:text-md text-pretty py-4">
-            I am always eager to connect with individuals and organizations that
-            align with my passion for human resources and technology.
-            <br />
-            <br />
-            As an HRM student and a self-taught developer, I am open to
-            mentorships, job shadowing opportunities, or collaborative projects
-            that will help me grow and contribute meaningfully to these fields.
-            <br />
-            <br />
-            If you are looking for a dedicated, adaptable, and growth-oriented
-            individual, I would be delighted to hear from you. Let&apos;s work
-            together to create impactful solutions and forge a path toward
-            success.
-          </p>
-        </div>
-        <div className="md:pl-10 lg:pl-0 lg:w-1/2 max-w-screen-sm">
-          <ProfileForm />
-        </div>
-      </section>
+  
+    <section
+      className="w-screen lg:max-w-screen-lg h-screen flex flex-col  p-4
+    xl:max-w-screen-2xl xl:justify-around "
+    >
+        <div className="place-self-end flex flex-row space-x-2 items-center">
+            
+            <Menu
+              className={`cursor-pointer ${isOpen ? "hidden" : ""}`}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          
+            <X
+              className={`cursor-pointer ${isOpen ? "z-10" : "hidden"}`}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </div>
+          <AnimatePresence mode="wait">
+            {isOpen ? <Navbar/> :null}
+          </AnimatePresence>
+     <div className="flex flex-col lg:flex-row p-4 space-y-10 lg:pl-6 lg:p-8 flex-1 w-full justify-between"> <Toaster position={isMobile ? "bottom-center" : "top-right"} />
+      <div className="flex flex-col space-y-3 lg:w-1/2 max-w-screen-sm place-self-start
+       ">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
+          Reach out ✦
+        </h1>
+        <p className="text-muted-foreground text-xs md:text-md text-pretty py-4">
+          I am always eager to connect with individuals and organizations that
+          align with my passion for human resources and technology.
+          <br />
+          <br />
+          As an HRM student and a self-taught developer, I am open to
+          mentorships, job shadowing opportunities, or collaborative projects
+          that will help me grow and contribute meaningfully to these fields.
+          <br />
+          <br />
+          If you are looking for a dedicated, adaptable, and growth-oriented
+          individual, I would be delighted to hear from you. Let&apos;s work
+          together to create impactful solutions and forge a path toward
+          success.
+        </p>
+      </div>
+      <div className="md:pl-10 lg:pl-0 lg:w-1/2 max-w-screen-sm ">
+        <ProfileForm />
+      </div></div>
       <Footer />
-    </main>
+    </section>
+   
   );
 }
+
 
 function ProfileForm  ()  {
   const form = useForm<z.infer<typeof formSchema>>({

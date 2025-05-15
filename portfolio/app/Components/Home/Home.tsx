@@ -9,10 +9,10 @@ import { ModeToggle } from '../mode-toggle';
 function Home() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <section className="w-screen font-dmsans h-fit  p-4 pt-4   dark:bg-neutral-950 text-[#eaeaea] overflow-x-hidden ">
+    <section className="w-screen font-dmsans h-fit   p-4 pt-4   dark:bg-neutral-950 text-[#eaeaea] overflow-x-hidden ">
         <div className="w-full p-2 border-[#eaeaea] flex justify-between items-center rounded-md relative z-40 flex-1">
           <h1 className=" font-bold text-[#eaeaea] text-lg ">
-            Portfolio®
+            Portfolio ®
           </h1>
           <div className="flex flex-row space-x-2 items-center">
             
