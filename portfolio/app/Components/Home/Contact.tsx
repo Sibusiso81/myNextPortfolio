@@ -3,7 +3,6 @@ import { CopyIcon, MessagesSquare  } from "lucide-react";
 import React  from "react";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
-import WordRotate from "@/components/ui/word-rotate";
 import { Button } from "@/components/ui/button";
 import LinkedIn from "../Svg/linkdin";
 import Instagram from "../Svg/instagram";
