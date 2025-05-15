@@ -57,7 +57,7 @@ export default function Page() {
   
     <section
       className="w-screen lg:max-w-screen-lg h-screen flex flex-col  p-4
-    xl:max-w-screen-2xl xl:justify-around "
+    xl:max-w-screen-2xl xl:justify-around bg-background  dark:bg-neutral-950 text-[#eaeaea] "
     >
         <div className="place-self-end flex flex-row space-x-2 items-center">
             
