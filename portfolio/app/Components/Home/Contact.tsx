@@ -66,16 +66,6 @@ zulusibusiso81@gmail.com
            <JavaScript/><p>Task  Manager</p>
               
             </div></Link>
-            <Link href={'https://task-manager-zeta-green.vercel.app/'}>
-           <div className="flex flex-row space-x-2 items-center">
-           <JavaScript/><p>Rock Paper Sccisors </p>
-              
-            </div></Link>
-            <Link href={'https://task-manager-zeta-green.vercel.app/'}>
-           <div className="flex flex-row space-x-2 items-center">
-           <JavaScript/><p>Quiz App</p>
-              
-            </div></Link>
 
             
             
